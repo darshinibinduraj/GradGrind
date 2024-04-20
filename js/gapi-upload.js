@@ -414,9 +414,9 @@ function signin() {
 	$('#monthlyscore').removeClass('d-none');
 }
 
-function cities() {
+function months() {
 	disableAll();
-	$('#cities').removeClass('d-none');
+	$('#months').removeClass('d-none');
 }
 
 function schools() {
@@ -447,7 +447,7 @@ function disableAll()
 	$('#leaderboard').addClass('d-none');
 	$('#navbarCollapse').addClass('d-none');
 	$('#navbarCollapse').removeClass('d-show');
-	$('#cities').addClass('d-none');
+	$('#months').addClass('d-none');
 	$('#schools').addClass('d-none');
 	$('#livermoreschools').addClass('d-none');
 	$('#schoollist').addClass('d-none');

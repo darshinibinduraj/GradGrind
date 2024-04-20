@@ -45,7 +45,7 @@
 			height: 150px;
 			width: 150px;
 			top: -75px;
-			border-radius: 2% 2% 0% 0%;
+			border-radius: 50%;
 			background: #072f6e;
 			padding: 10px;
 			text-align: center;
@@ -53,7 +53,7 @@
 		.brand_logo {
 			height: 150px;
 			width: 150px;
-			border-radius: 0%;
+			border-radius: 50%;
 			border: 2px solid white;
 		}
 		.login_btn {
@@ -410,3 +410,7 @@ div.footer {
   .card-1 {
 	width: 100% !important;
   }
+
+  .ml-10 {
+    margin-left: 10px !important;
+}

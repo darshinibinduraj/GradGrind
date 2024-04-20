@@ -8,6 +8,7 @@
     <link rel="icon" href="./images/logo.jpg">
     <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='style/webcam-demo.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/login.css'>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -27,13 +28,10 @@
 	            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
 	          </li>
 	          <li class="nav-item">
-	            <a class="nav-link text-white" onclick="cities()">Cities</a>
+	            <a class="nav-link text-white" onclick="months()">Monthly Budget</a>
 	          </li>
 	          <li class="nav-item">
-	            <a class="nav-link text-white" onclick="scoreboard()">Leaderboard</a>
-	          </li>
-	          <li class="nav-item">
-	            <a class="nav-link text-white" href="" tabindex="-1">About</a>
+	            <a class="nav-link text-white" onclick="scoreboard()">Goals</a>
 	          </li>
 	        </ul>
 	        <form class="form-inline mt-2 mt-md-0">
@@ -108,7 +106,7 @@
 	  								<div class="input-group-append">
 	  									<span class="input-group-text"><i class="fas fa-user"></i></span>
 	  								</div>
-	  								<input type="text" name="" class="form-control input_user" value="" placeholder="Username">
+	  								<input type="text" name="" class="form-control input_user" value="" placeholder="Email">
 	  							</div>
 	  							<div class="input-group mb-2">
 	  								<div class="input-group-append">
@@ -128,12 +126,12 @@
 	  								</div>
 	  								<input type="text" name="" class="form-control input_user" value="" placeholder="Gender">
 	  							</div>
-	  							<div class="form-group">
-	  								<div class="custom-control custom-checkbox">
-	  									<input type="checkbox" class="custom-control-input" id="customControlInline">
-	  									<label class="custom-control-label" for="customControlInline">Do you recycle plastics, aluminum etc?</label>
-	  								</div>
-	  							</div>
+	  							<div class="input-group mb-2">
+									<div class="input-group-append">
+										<span class="input-group-text"><i class="fas fa-user"></i></span>
+									</div>
+									<input type="text" name="" class="form-control input_user" value="" placeholder="College/University">
+								</div>
 	  						</form>
 	  					</div>
 	  					<div class="col-md-6">
@@ -161,6 +159,12 @@
 										<span class="input-group-text"><i class="fas fa-user"></i></span>
 									</div>
 									<input type="text" name="" class="form-control input_user" value="" placeholder="Zip code">
+								</div>
+								<div class="input-group mb-2">
+									<div class="input-group-append">
+										<span class="input-group-text"><i class="fas fa-user"></i></span>
+									</div>
+									<input type="text" name="" class="form-control input_user" value="" placeholder="Major">
 								</div>
 	  						</form>
 	  					</div>
@@ -229,122 +233,631 @@
 	  	</div>
 
 	  	<!-- City Affliation -->
-	  	<div id="cities" class="row mb-2 d-none">
+	  	<div id="months" class="row mb-2 d-none">			
 	  		<div class="container mt-6">
-	  			<div class="row">
+				<button class="btn btn-secondary my-2 mr-2" type="button" id="btnLogin" onclick="logout()">Add Budget Month</button>
+	  			<div class="row">					
 	  				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 	  					<div class="tile">
 	  						<div class="wrapper">
-	  							<div class="header">Livermore</div>
+	  							<div class="header">January</div>
 
-	  							<div class="banner-img">
-	  								<img src="./images/livermore.jpg" alt="Image 1">
-	  							</div>
+								  <div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">Income</h3>
+									</div>   
+									<ul class="list-group">
+										<li class="list-group-item">
+											<div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+												<div class="col-xs-10">
+													Starbucks Barista: $1500.00
+												</div>
+											</div>
+											<div id="detail-1">
+												<hr></hr>
+												<div class="container">
+													<div class="fluid-row">
+														<div class="col-xs-1">
+															01/07 - Work: $500.00 
+														</div>
+														<div class="col-xs-1">
+															01/14 - Work: $500.00
+														</div>
+														<div class="col-xs-1">
+															01/21 - Work: $500.00
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+												<div class="col-xs-10">
+													Family Support: $1000.00
+												</div>
+											</div>
+											<div id="detail-2">
+												<hr></hr>
+												<div class="container">
+													<div class="fluid-row">
+														<div class="col-xs-1">
+															01/11 - Check: $500.00
+														</div>
+														<div class="col-xs-1">
+															01/15 - Check: $500.00
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								  <div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">Expenses</h3>
+									</div>   
+									<ul class="list-group">
+										<li class="list-group-item">
+											<div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+												<div class="col-xs-10">
+													Groceries: $200.00
+												</div>
+											</div>
+											<div id="detail-3">
+												<hr></hr>
+												<div class="container">
+													<div class="fluid-row">
+														<div class="col-xs-1">
+															01/05 - Safeway: $50.00
+														</div>
+														<div class="col-xs-1">
+															01/15 - Medical: $75.00
+														</div>
+														<div class="col-xs-1">
+															01/25 - Restaurant: $75.00
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
+												<div class="col-xs-10">
+													Entertainment: $50.00
+												</div>
+											</div>
+											<div id="detail-4">
+												<hr></hr>
+												<div class="container">
+													<div class="fluid-row">
+														<div class="col-xs-1">
+															01/11 - Movie: $20.00
+														</div>
+														<div class="col-xs-1">
+															01/15 - Games: $30.00
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
+												<div class="col-xs-10">
+													Rent and Utilities: $1350.00
+												</div>
+											</div>
+											<div id="detail-2">
+												<hr></hr>
+												<div class="container">
+													<div class="fluid-row">
+														<div class="col-xs-1">
+															01/01 - Rent: $1150.00
+														</div>
+														<div class="col-xs-1">
+															01/01 - Internet: $50.00
+														</div>
+														<div class="col-xs-1">
+															01/01 - Phone: $50.00
+														</div>
+														<div class="col-xs-1">
+															01/01 - Water: $50.00
+														</div>
+														<div class="col-xs-1">
+															01/01 - Electric: $50.00
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								  
 	  							<div class="stats">
 	  								<div>
-	  									<strong>MEMBERS</strong> 3098
+	  									<strong>Income</strong> $2500.00
 	  								</div>
 	  								<div>
-	  									<strong>SWAPPED</strong> 562
+	  									<strong>Expenses</strong> $1600.00
 	  								</div>
 	  								<div>
-	  									<strong>CO2 SAVED</strong> 1182 lbs
+	  									<strong>Saved</strong> $900.00
 	  								</div>
 	  							</div>
 	  							<div class="footer justify-content-center">
-	  								<a href="#" class="btn login_btn" onclick="livermoreschools()">SELECT</a>
+	  								<a href="#" class="btn login_btn" onclick="livermoreschools()">Edit</a>
 	  							</div>
 	  						</div>
 	  					</div>
 	  				</div>
 
-	  				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-	  					<div class="tile">
-	  						<div class="wrapper">
-	  							<div class="header">Pleasanton</div>
+					  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="tile">
+							<div class="wrapper">
+								<div class="header">Febraury</div>
 
-	  							<div class="banner-img">
-	  								<img src="./images/pleasanton.png" alt="Image 1">
-	  							</div>
+								<div class="panel panel-default">
+								  <div class="panel-heading">
+									  <h3 class="panel-title">Income</h3>
+								  </div>   
+								  <ul class="list-group">
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+											  <div class="col-xs-10">
+												  Starbucks Barista: $1500.00
+											  </div>
+										  </div>
+										  <div id="detail-1">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/07 - Work: $500.00 
+													  </div>
+													  <div class="col-xs-1">
+														  01/14 - Work: $500.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/21 - Work: $500.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+											  <div class="col-xs-10">
+												  Family Support: $1000.00
+											  </div>
+										  </div>
+										  <div id="detail-2">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/11 - Check: $500.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Check: $500.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+								  </ul>
+							  </div>
+								<div class="panel panel-default">
+								  <div class="panel-heading">
+									  <h3 class="panel-title">Expenses</h3>
+								  </div>   
+								  <ul class="list-group">
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+											  <div class="col-xs-10">
+												  Groceries: $200.00
+											  </div>
+										  </div>
+										  <div id="detail-3">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/05 - Safeway: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Medical: $75.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/25 - Restaurant: $75.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
+											  <div class="col-xs-10">
+												  Entertainment: $50.00
+											  </div>
+										  </div>
+										  <div id="detail-4">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/11 - Movie: $20.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Games: $30.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
+											  <div class="col-xs-10">
+												  Rent and Utilities: $1350.00
+											  </div>
+										  </div>
+										  <div id="detail-2">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/01 - Rent: $1150.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Internet: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Phone: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Water: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Electric: $50.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+								  </ul>
+							  </div>
+
+								
 								<div class="stats">
 									<div>
-										<strong>MEMBERS</strong> 998
+										<strong>Income</strong> $2500.00
 									</div>
 									<div>
-										<strong>SWAPPED</strong> 262
+										<strong>Expenses</strong> $1600.00
 									</div>
 									<div>
-										<strong>CO2 SAVED</strong> 432 lbs
+										<strong>Saved</strong> $900.00
 									</div>
 								</div>
-	  							
-	  							<div class="footer">
-	  								<a href="#" class="btn login_btn">SELECT</a>
-	  								<!--<a href="#" class="Cbtn Cbtn-danger">DISJOIN</a>-->
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
+								<div class="footer justify-content-center">
+									<a href="#" class="btn login_btn" onclick="livermoreschools()">Edit</a>
+								</div>
+							</div>
+						</div>
+					</div>
 
-	  				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-	  					<div class="tile">
-	  						<div class="wrapper">
-	  							<div class="header">Dublin</div>
 
-	  							<div class="banner-img">
-	  								<img src="./images/dublin.jpg" alt="Image 1">
-	  							</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="tile">
+							<div class="wrapper">
+								<div class="header">March</div>
 
+								<div class="panel panel-default">
+								  <div class="panel-heading">
+									  <h3 class="panel-title">Income</h3>
+								  </div>   
+								  <ul class="list-group">
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+											  <div class="col-xs-10">
+												  Starbucks Barista: $1500.00
+											  </div>
+										  </div>
+										  <div id="detail-1">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/07 - Work: $500.00 
+													  </div>
+													  <div class="col-xs-1">
+														  01/14 - Work: $500.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/21 - Work: $500.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+											  <div class="col-xs-10">
+												  Family Support: $1000.00
+											  </div>
+										  </div>
+										  <div id="detail-2">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/11 - Check: $500.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Check: $500.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+								  </ul>
+							  </div>
+								<div class="panel panel-default">
+								  <div class="panel-heading">
+									  <h3 class="panel-title">Expenses</h3>
+								  </div>   
+								  <ul class="list-group">
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+											  <div class="col-xs-10">
+												  Groceries: $200.00
+											  </div>
+										  </div>
+										  <div id="detail-3">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/05 - Safeway: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Medical: $75.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/25 - Restaurant: $75.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
+											  <div class="col-xs-10">
+												  Entertainment: $50.00
+											  </div>
+										  </div>
+										  <div id="detail-4">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/11 - Movie: $20.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Games: $30.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
+											  <div class="col-xs-10">
+												  Rent and Utilities: $1350.00
+											  </div>
+										  </div>
+										  <div id="detail-2">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/01 - Rent: $1150.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Internet: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Phone: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Water: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Electric: $50.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+								  </ul>
+							  </div>
+
+								
 								<div class="stats">
 									<div>
-										<strong>MEMBERS</strong> 2098
+										<strong>Income</strong> $2500.00
 									</div>
 									<div>
-										<strong>SWAPPED</strong> 362
+										<strong>Expenses</strong> $1600.00
 									</div>
 									<div>
-										<strong>CO2 SAVED</strong> 682 lbs
+										<strong>Saved</strong> $900.00
 									</div>
 								</div>
+								<div class="footer justify-content-center">
+									<a href="#" class="btn login_btn" onclick="livermoreschools()">Edit</a>
+								</div>
+							</div>
+						</div>
+					</div>
 
-	  							<div class="footer">
-	  								<a href="#" class="btn login_btn">SELECT</a>
-	  								<!--<a href="#" class="Cbtn Cbtn-danger">Delete</a>-->
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
 
-	  				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-	  					<div class="tile">
-	  						<div class="wrapper">
-	  							<div class="header">San Ramon</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="tile">
+							<div class="wrapper">
+								<div class="header">April</div>
 
-	  							<div class="banner-img">
-	  								<img src="./images/san ramon.png" alt="Image 1">
-	  							</div>
+								<div class="panel panel-default">
+								  <div class="panel-heading">
+									  <h3 class="panel-title">Income</h3>
+								  </div>   
+								  <ul class="list-group">
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+											  <div class="col-xs-10">
+												  Starbucks Barista: $1500.00
+											  </div>
+										  </div>
+										  <div id="detail-1">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/07 - Work: $500.00 
+													  </div>
+													  <div class="col-xs-1">
+														  01/14 - Work: $500.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/21 - Work: $500.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+											  <div class="col-xs-10">
+												  Family Support: $1000.00
+											  </div>
+										  </div>
+										  <div id="detail-2">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/11 - Check: $500.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Check: $500.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+								  </ul>
+							  </div>
+								<div class="panel panel-default">
+								  <div class="panel-heading">
+									  <h3 class="panel-title">Expenses</h3>
+								  </div>   
+								  <ul class="list-group">
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+											  <div class="col-xs-10">
+												  Groceries: $200.00
+											  </div>
+										  </div>
+										  <div id="detail-3">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/05 - Safeway: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Medical: $75.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/25 - Restaurant: $75.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
+											  <div class="col-xs-10">
+												  Entertainment: $50.00
+											  </div>
+											
+										  </div>
+										  <div id="detail-4">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/11 - Movie: $20.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/15 - Games: $30.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+									  <li class="list-group-item">
+										  <div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
+											  <div class="col-xs-10">
+												  Rent and Utilities: $1350.00
+											  </div>
+										  </div>
+										  <div id="detail-2">
+											  <hr></hr>
+											  <div class="container">
+												  <div class="fluid-row">
+													  <div class="col-xs-1">
+														  01/01 - Rent: $1150.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Internet: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Phone: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Water: $50.00
+													  </div>
+													  <div class="col-xs-1">
+														  01/01 - Electric: $50.00
+													  </div>
+												  </div>
+											  </div>
+										  </div>
+									  </li>
+								  </ul>
+							  </div>
+
+								
 								<div class="stats">
 									<div>
-										<strong>MEMBERS</strong> 1098
+										<strong>Income</strong> $2500.00
 									</div>
 									<div>
-										<strong>SWAPPED</strong> 162
+										<strong>Expenses</strong> $1600.00
 									</div>
 									<div>
-										<strong>CO2 SAVED</strong> 182 lbs
+										<strong>Saved</strong> $900.00
 									</div>
 								</div>
+								<div class="footer justify-content-center">
+									<a href="#" class="btn login_btn" onclick="livermoreschools()">Edit</a>
+								</div>
+							</div>
+						</div>
+					</div>
 
-	  							<div class="footer">
-	  								<a href="#" class="btn login_btn">SELECT</a>
-	  								<!--<a href="#" class="Cbtn Cbtn-danger">Delete</a>-->
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
 	  			</div>
 	  		</div>
-	  		<p class="ml-3">* Higher score is better - more CO2 saved</p>
 	  	</div>
 
 	  	<!-- Livermore School Affliation -->
