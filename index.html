@@ -1465,6 +1465,7 @@
 
 	<!--Leader Board-->
 	  	<div class="container mt-5 d-none" id="leaderboard">
+			<button class="btn btn-secondary my-2 mr-2 mt-2" type="button" id="btnLogin" onclick="logout()">Add Goals</button>			
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="candidate-list">
@@ -1479,22 +1480,22 @@
 									<div class="col-lg-5">
 										<div class="candidate-list-content mt-3 mt-lg-0">
 											<h5 class="fs-19 mb-0">
-												<a class="primary-link" href="#">Darshini C Binduraj</a>
+												<a class="primary-link" href="#">Week 1</a>
 												<span class="badge bg-success ms-1">
-												<i class="mdi mdi-star align-middle"></i>CO2 Score: 321 lbs</span>
+												<i class="mdi mdi-star align-middle"></i>Income: $500</span>
 											</h5>
-											<p class="text-muted mb-2">Clothes Swapped: 650</p>
+											<p class="text-muted mb-2">Expenses: $200.00</p>
 											<ul class="list-inline mb-0 text-muted">
-												<li class="list-inline-item"><i class="mdi mdi-map-marker"></i>Livermore High School</li>
-												<li class="list-inline-item"><i class="mdi mdi-wallet"></i>Points: 321</li>
+												<li class="list-inline-item"><i class="mdi mdi-map-marker"></i>Save: 300.00</li>
+												<li class="list-inline-item"><i class="mdi mdi-wallet"></i></li>
 											</ul>
 										</div>
 									</div>
 									<div class="col-lg-4">
 										<div class="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Current Listing</button>
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Past Listing</button>
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Score History</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Add</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Edit</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Delete</button>
 										</div>
 									</div>
 								</div>
@@ -1514,92 +1515,92 @@
 									<div class="col-lg-5">
 										<div class="candidate-list-content mt-3 mt-lg-0">
 											<h5 class="fs-19 mb-0">
-												<a class="primary-link" href="#">Lakshanya Palani</a>
-												<span class="badge bg-warning ms-1">
-													<i class="mdi mdi-star align-middle"></i>CO2 Score: 320</span>
-											</h5>
-											<p class="text-muted mb-2">Clothes Swapped: 640</p>
-											<ul class="list-inline mb-0 text-muted">
-												<li class="list-inline-item"><i class="mdi mdi-map-marker"></i>Foothill High School</li>
-												<li class="list-inline-item"><i class="mdi mdi-wallet"></i> Points: 640</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-lg-4">
-										<div class="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Current Listing</button>
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Past Listing</button>
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Score History</button>
-										</div>
-									</div>
-								</div>
-								<div class="favorite-icon">
-									<a href="#"><i class="mdi mdi-heart fs-18"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="candidate-list-box leadercard mt-4">
-							<div class="p-4 card-body">
-								<div class="align-items-center row">
-									<div class="col-auto">
-										<div class="candidate-list-images">
-											<a href="#"><img style="height: 100px" src="./images/leaderperson1.png" alt="" class="avatar-md img-thumbnail rounded-circle" /></a>
-										</div>
-									</div>
-									<div class="col-lg-5">
-										<div class="candidate-list-content mt-3 mt-lg-0">
-											<h5 class="fs-19 mb-0">
-												<a class="primary-link" href="#">Pournami Prasanth </a>
-												<span class="badge bg-primary ms-1">
-													<i class="mdi mdi-star align-middle"></i>CO2 Score: 639</span>
-											</h5>
-											<p class="text-muted mb-2">Clothes Swapped: 630</p>
-											<ul class="list-inline mb-0 text-muted">
-												<li class="list-inline-item"><i class="mdi mdi-map-marker"></i> Livermore High School</li>
-												<li class="list-inline-item"><i class="mdi mdi-wallet"></i>Points: 630</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-lg-4">
-										<div class="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Current Listing</button>
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Past Listing</button>
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Score History</button>
-										</div>
-									</div>
-								</div>
-								<div class="favorite-icon">
-									<a href="#"><i class="mdi mdi-heart fs-18"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="candidate-list-box leadercard mt-4">
-							<div class="p-4 card-body">
-								<div class="align-items-center row">
-									<div class="col-auto">
-										<div class="candidate-list-images">
-											<a href="#"><img style="height: 100px" src="./images/leaderperson1.png" alt="" class="avatar-md img-thumbnail rounded-circle" /></a>
-										</div>
-									</div>
-									<div class="col-lg-5">
-										<div class="candidate-list-content mt-3 mt-lg-0">
-											<h5 class="fs-19 mb-0">
-												<a class="primary-link" href="#">Niya Justine</a>
+												<a class="primary-link" href="#">Week 1</a>
 												<span class="badge bg-success ms-1">
-													<i class="mdi mdi-star align-middle"></i>CO2 Score: 638</span>
+												<i class="mdi mdi-star align-middle"></i>Income: $500</span>
 											</h5>
-											<p class="text-muted mb-2">Clothes Swapped: 638</p>
+											<p class="text-muted mb-2">Expenses: $200.00</p>
 											<ul class="list-inline mb-0 text-muted">
-												<li class="list-inline-item"><i class="mdi mdi-map-marker"></i>Sanjose High School</li>
-												<li class="list-inline-item"><i class="mdi mdi-wallet"></i> Points: 638</li>
+												<li class="list-inline-item"><i class="mdi mdi-map-marker"></i>Save: 300.00</li>
+												<li class="list-inline-item"><i class="mdi mdi-wallet"></i></li>
 											</ul>
 										</div>
 									</div>
 									<div class="col-lg-4">
 										<div class="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Current Listing</button>
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Past Listing</button>
-											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Score History</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Add</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Edit</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Delete</button>
+										</div>
+									</div>
+								</div>
+								<div class="favorite-icon">
+									<a href="#"><i class="mdi mdi-heart fs-18"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="candidate-list-box leadercard mt-4">
+							<div class="p-4 card-body">
+								<div class="align-items-center row">
+									<div class="col-auto">
+										<div class="candidate-list-images">
+											<a href="#"><img style="height: 100px" src="./images/leaderperson1.png" alt="" class="avatar-md img-thumbnail rounded-circle" /></a>
+										</div>
+									</div>
+									<div class="col-lg-5">
+										<div class="candidate-list-content mt-3 mt-lg-0">
+											<h5 class="fs-19 mb-0">
+												<a class="primary-link" href="#">Week 1</a>
+												<span class="badge bg-success ms-1">
+												<i class="mdi mdi-star align-middle"></i>Income: $500</span>
+											</h5>
+											<p class="text-muted mb-2">Expenses: $200.00</p>
+											<ul class="list-inline mb-0 text-muted">
+												<li class="list-inline-item"><i class="mdi mdi-map-marker"></i>Save: 300.00</li>
+												<li class="list-inline-item"><i class="mdi mdi-wallet"></i></li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Add</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Edit</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Delete</button>
+										</div>
+									</div>
+								</div>
+								<div class="favorite-icon">
+									<a href="#"><i class="mdi mdi-heart fs-18"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="candidate-list-box leadercard mt-4">
+							<div class="p-4 card-body">
+								<div class="align-items-center row">
+									<div class="col-auto">
+										<div class="candidate-list-images">
+											<a href="#"><img style="height: 100px" src="./images/leaderperson1.png" alt="" class="avatar-md img-thumbnail rounded-circle" /></a>
+										</div>
+									</div>
+									<div class="col-lg-5">
+										<div class="candidate-list-content mt-3 mt-lg-0">
+											<h5 class="fs-19 mb-0">
+												<a class="primary-link" href="#">Week 1</a>
+												<span class="badge bg-success ms-1">
+												<i class="mdi mdi-star align-middle"></i>Income: $500</span>
+											</h5>
+											<p class="text-muted mb-2">Expenses: $200.00</p>
+											<ul class="list-inline mb-0 text-muted">
+												<li class="list-inline-item"><i class="mdi mdi-map-marker"></i>Save: 300.00</li>
+												<li class="list-inline-item"><i class="mdi mdi-wallet"></i></li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Add</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Edit</button>
+											<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Delete</button>
 										</div>
 									</div>
 								</div>
@@ -1616,22 +1617,21 @@
 							<a href="#"><img style="height: 100px" src="./images/leaderperson1.png" alt="" class="avatar-md img-thumbnail rounded-circle" /></a>
 						</div>
 						<div class="card-body">
-							<h5 class="card-title text-center">Niya Justine</h5>
+							<h5 class="card-title text-center">Student Name</h5>
 							<span class="badge bg-success ms-1">
-								<i class="mdi mdi-star align-middle"></i>CO2 Score: 600</span>
+								<i class="mdi mdi-star align-middle"></i></span>
 							<p class="card-text">
 								
 							</p>
 							<ul class="list-group list-group-flush">
-								<li class="list-group-item">Clothes Swapped: 620</li>
-								<li class="list-group-item">Sanjose High School</li>
-								<li class="list-group-item">Currently Listed: 20</li>
+								<li class="list-group-item">Goals Met: 3</li>
+								<li class="list-group-item">High Expense: $500.00</li>
+								<li class="list-group-item">High Income : $1000.00</li>
 							</ul>
 							<div class="text-center">
-								<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister" onclick="addclothes()">Current Listing</button>
-								<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Past Listing</button>
-								<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Score History</button>
-						
+								<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Edit</button>						
+								<button class="btn btn-secondary btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Add</button>														
+								<button class="btn btn-danger btn-sm my-2 mr-2 mt-1" type="button" id="btnRegister">Delete</button>																						
 							</div>
 				
 						</div>
