@@ -379,3 +379,7 @@ input[type="file"] {
   background-color: #fdcccc !important;
 }
 
+.yellow {
+  background-color: rgb(247, 247, 154) !important;
+}
+
