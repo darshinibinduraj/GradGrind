@@ -371,3 +371,11 @@ input[type="file"] {
     cursor: pointer;
 }
 
+.green {
+  background-color: #c2f3c8 !important;
+}
+
+.red {
+  background-color: #fdcccc !important;
+}
+
